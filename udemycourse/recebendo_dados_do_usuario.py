@@ -5,8 +5,8 @@ input() -> Todo valor recebecido via input é do tipo string
 """
 
 # Entrada de Dados
-print("Qual o seu nome?")
-nome = input()
+# print("Qual o seu nome?")
+nome = input('Qual seu nome?\n')
 
 # Exemplo de print 'antigo' 2.x
 # print('Seja Bem-Vindo(a) %s' % nome)
@@ -17,8 +17,8 @@ nome = input()
 # Exemplo de print 'mais atual' 3.7
 print (f'Seja Bem-Vindo(a) {nome}')
 
-print("Qual a sua idade?")
-idade = input()
+# print("Qual a sua idade?")
+idade = input('Qual sua idade?\n')
 
 # Exemplo de print 'antigo' 2.x
 # print('A %s tem %s ano(s)' % (nome, idade))
