@@ -66,10 +66,23 @@ from types import (
 
 [6] - Espaços em expressões e instruções
 # Não Faça
-
 funcao( algo[ 1], { outro: 2 })
 
 # Faça
-
 funcao(algo[1], {outro: 2})
+
+# Não Faça:
+algo (1)
+
+# Faça:
+algo(1)
+
+# Não Faça:
+dict ['chave'] = lista [indice]
+
+# Faça:
+dict['chave'] = lista[indice]
+
+
+
 """
