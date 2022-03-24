@@ -18,7 +18,7 @@ nome = input('Qual seu nome?\n')
 print (f'Seja Bem-Vindo(a) {nome}')
 
 # print("Qual a sua idade?")
-idade = input('Qual sua idade?\n')
+idade = int(input('Qual sua idade?\n'))
 
 # Exemplo de print 'antigo' 2.x
 # print('A %s tem %s ano(s)' % (nome, idade))
@@ -29,4 +29,4 @@ idade = input('Qual sua idade?\n')
 # Exemplo de print 'mais atual' 3.7
 print (f'O(a) {nome}  tem {idade} ano(s)')
 
-print(f'O(a) {nome} nasceu em {2022 - int(idade)}')
+print(f'O(a) {nome} nasceu em {2022 - idade}')
