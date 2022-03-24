@@ -83,6 +83,6 @@ dict ['chave'] = lista [indice]
 # Faça:
 dict['chave'] = lista[indice]
 
-
-
+[7] - Termine sempre um instrução com uma nova linha
 """
+print("Algo")
