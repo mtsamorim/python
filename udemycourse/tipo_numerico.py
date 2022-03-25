@@ -6,6 +6,8 @@ num = input()
 num2 = int(input())
 num3 = input()
 
+print('=====================')
+
 print(num)
 
 print(num2**num2)
