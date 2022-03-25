@@ -15,7 +15,7 @@ nome = input('Qual seu nome?\n')
 # print('Seja Bem-Vindo(a) {0}' .format(nome))
 
 # Exemplo de print 'mais atual' 3.7
-print (f'Seja Bem-Vindo(a) {nome}')
+print(f'Seja Bem-Vindo(a) {nome}')
 
 # print("Qual a sua idade?")
 idade = int(input('Qual sua idade?\n'))
@@ -27,6 +27,6 @@ idade = int(input('Qual sua idade?\n'))
 # print('O {0} tem {1} ano(s)' .format(nome, idade))
 
 # Exemplo de print 'mais atual' 3.7
-print (f'O(a) {nome}  tem {idade} ano(s)')
+print(f'O(a) {nome}  tem {idade} ano(s)')
 
 print(f'O(a) {nome} nasceu em {2022 - idade}')
