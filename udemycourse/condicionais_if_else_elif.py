@@ -1,3 +1,7 @@
+"""
+Estruturas Condicionais if, else e elif
+"""
+
 idade = int(input())
 
 # Certo
