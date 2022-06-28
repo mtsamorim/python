@@ -15,7 +15,6 @@ print("+++++++++++++++++++Python Calculator+++++++++++++++++++\n")
 opt = int(input("Seleciona o número da opção desejada: \n\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n\nDigite sua opção [1/2/3/4]: "))
 
 if(opt == 1 or opt == 2 or opt == 3 or opt == 4):
-    print("Número inválido") 
     
     num1 = input("\nDigite o primeiro número: ")
     
