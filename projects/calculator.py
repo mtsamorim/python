@@ -13,21 +13,22 @@ def div(x,y):
 print("+++++++++++++++++++Python Calculator+++++++++++++++++++\n")
 
 opt = int(input("Seleciona o número da opção desejada: \n\n1 - Soma\n2 - Subtração\n3 - Multiplicação\n4 - Divisão\n\nDigite sua opção [1/2/3/4]: "))
-
+        
 if(opt == 1 or opt == 2 or opt == 3 or opt == 4):
     
     num1 = input("\nDigite o primeiro número: ")
     
     num2 = input("\nDigite o segundo número: ")
-
+    
     ty  = False
 
     for i in num1:
         if i == ".":
             ty = True
 
-    num1 = float(num1)
-    num2 = float(num2)
+        num1 = float(num1)
+
+        num2 = float(num2)
 
     if ty == True:
         if(opt == 1):
