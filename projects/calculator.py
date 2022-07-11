@@ -8,7 +8,7 @@ def mul(x, y):
     return x * y
 
 def div(x,y):
-    return x / y
+        return x / y
 
 print("+++++++++++++++++++Python Calculator+++++++++++++++++++\n")
 
@@ -46,7 +46,13 @@ if(opt == 1 or opt == 2 or opt == 3 or opt == 4):
         elif(opt == 3):
             print("\n%.0f * %.0f = %.0f" %(num1, num2, mul(num1, num2)))
         else:
-            print("\n%.0f / %.0f = %.0f" %(num1, num2, div(num1, num2)))
-
+            if num2 != 0:               
+                    print("\n%.0f / %.0f = %.1f" %(num1, num2, div(num1, num2)))
+            else:
+                try:
+                    div(num1, num2)
+                except ZeroDivisionError:
+                    print("\nOperação Indefinida, por favor escolha um novo divisor.")
+                 
 else:
-    print("Opção Inválida")
+    print("\nOpção Inválida")
