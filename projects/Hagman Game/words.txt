@@ -1,8 +1,1 @@
-casa
-barco
-boi
-bolo
-lagoa
-azul
-parto
-andar
+casa barco boi bolo lagoa azul parto andar

@@ -81,14 +81,21 @@ class Hangman:
 
     word = str
 
-    #def guess(self)
+    def guess(self, letter):
+        for i in self.word:
+            return print(i)
 
 
 def randword():
-    with open("C:\\Users\malva\Documents\GitHub\python\projects\Hagman Gamewords.txt", "r") as file:
+    with open("C:\\Users\malva\Documents\GitHub\python\projects\Hagman Game\words.txt", "r") as file:
         allText = file.read()
         words = [str(x) for x in allText.split()]
 
-    return print(random.choice(words))
+    return random.choice(words)
 
-randword()
+def main():
+    aux = randword()
+    forca1 = Hangman(aux)
+    #return print(aux)
+
+main()
