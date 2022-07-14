@@ -91,7 +91,7 @@ gallows = [
 class Hangman:
     # Constructor method
     def __init__(self, word):
-        self.word = word
+        self.word = word.upper()
         self.ml = []
         self.cl = []
         self.gl = []
@@ -118,6 +118,7 @@ class Hangman:
                 self.gl[x] = letter
                 if letter not in word4:
                     self.cl.append(letter)
+                    word4 = ' '.join(str(x) for x in self.cl)
                 aux3 = True
 
         if aux3 == False and letter not in word3:
@@ -163,7 +164,7 @@ class Hangman:
 
         word2 = ' '.join(str(x) for x in self.cl)
 
-        return print(gallows[self.aux2] +"\nLetras Erradas: "+ word1.upper() +"\n\nLetras Certas: "+ word2.upper() +"\n\nPalavra: " + word.upper() + "\n\n")
+        return print(gallows[self.aux2] +"\nLetras Erradas: "+ word1.upper() +"\n\nLetras Certas: "+ word2.upper() +"\n\nPalavra: " + word.upper() + "\n")
          
 
 # Function to get random word
@@ -189,7 +190,7 @@ def main():
         while user_letter.isalpha() == False:
             user_letter = input("\nType a Valid letter: ")
             
-        forca1.guess(user_letter)
+        forca1.guess(user_letter.upper())
     
     # De acordo com o status, imprime mensagem na tela para o usuário
     if forca1.hangmanwon():
@@ -198,7 +199,7 @@ def main():
     else:
         forca1.status()
         print ('\nGame over! Você perdeu.')
-        print ('A palavra era ' + forca1.word)       
+        print ('A palavra era ' + forca1.word.upper())       
 
 
 main()
