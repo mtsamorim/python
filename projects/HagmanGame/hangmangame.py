@@ -1,5 +1,4 @@
 import random
-import re
 
 #list with the gallows formated
 gallows = [
@@ -108,7 +107,7 @@ class Hangman:
 
         
         
-    # Método para adivinhar a letra
+    # Method to guess the letter
     def guess(self,letter):
         aux3 = False
         word3 = ' '.join(str(x) for x in self.ml)
@@ -129,7 +128,7 @@ class Hangman:
             self.aux2 = self.aux2 + 1
 
         
-    # Método para verificar se o jogo terminou
+    # Method to check if the game has ended
     def hangmanover(self):
         bo = self.hangmanwon()
         if bo == True:
@@ -139,7 +138,7 @@ class Hangman:
         elif bo == False:
             return False
         
-    # Método para verificar se o jogador venceu
+    # Method to check if the player has won
     def hangmanwon(self):
         aux4 = True
         x = 0
@@ -151,12 +150,12 @@ class Hangman:
 
         return aux4
 
-    # Método para não mostrar a letra no board
+    # Method to not show the letters on the board
     def hide_word(self):
         for x in range(len(self.word)):
             self.gl = []
 
-    # Método para checar o status do game e imprimir o board na tela
+    # Method to check the game status and print the board on the screen
     def status(self):
         word = ' '.join(str(x) for x in self.gl)
 
@@ -164,7 +163,7 @@ class Hangman:
 
         word2 = ' '.join(str(x) for x in self.cl)
 
-        return print(gallows[self.aux2] +"\nLetras Erradas: "+ word1.upper() +"\n\nLetras Certas: "+ word2.upper() +"\n\nPalavra: " + word.upper() + "\n")
+        return print(gallows[self.aux2] +"\nWrong Letters: "+ word1.upper() +"\n\nCorrect Letters: "+ word2.upper() +"\n\nWord: " + word.upper() + "\n")
          
 
 # Function to get random word
@@ -178,10 +177,10 @@ def randword():
 # Function Main
 def main():
     
-    # Objeto
+    # Object
     forca1 = Hangman(str(randword()))
 
-    # Enquanto o jogo não tiver terminado, print do status, solicita uma letra e faz a leitura do caracter
+    # While the game has not finished, print the status, request a letter and read the character
     while not forca1.hangmanover():
         forca1.status()
         user_letter = input("Type a letter: ")
@@ -192,7 +191,7 @@ def main():
             
         forca1.guess(user_letter.upper())
     
-    # De acordo com o status, imprime mensagem na tela para o usuário
+    # According to status, print message on screen to user
     if forca1.hangmanwon():
         forca1.status()
         print ('\nParabéns! Você venceu!!')
@@ -200,6 +199,5 @@ def main():
         forca1.status()
         print ('\nGame over! Você perdeu.')
         print ('A palavra era ' + forca1.word.upper())       
-
 
 main()
