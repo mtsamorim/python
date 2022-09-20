@@ -10,7 +10,7 @@ tra = ((a+b)*c)/2.0
 qua = b**2.0
 ret = a*b
 
-print('TRIANGULO1: {:.3f}' .format(tri))
+print('TRIANGULO: {:.3f}' .format(tri))
 print('CIRCULO: {:.3f}' .format(cir))
 print('TRAPEZIO: {:.3f}' .format(tra))
 print('QUADRADO: {:.3f}' .format(qua))
