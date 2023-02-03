@@ -27,7 +27,7 @@ def applyGaussianBlur(image, detected, sigma=5):
     return image
 
 
-image = io.imread("face2.jpg")
+image = io.imread("/home/mtsamorim/Documents/python/face2.jpg")
 
 trained_file = data.lbp_frontal_face_cascade_filename()
 
