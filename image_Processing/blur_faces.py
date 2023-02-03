@@ -27,14 +27,14 @@ def applyGaussianBlur(image, detected, sigma=5):
     return image
 
 
-image = io.imread("/home/mtsamorim/Documents/python/face2.jpg")
+image = io.imread("image_Processing/face2.jpg")
 
 trained_file = data.lbp_frontal_face_cascade_filename()
 
 detector = feature.Cascade(trained_file)
 
 detected = detector.detect_multi_scale(
-    img=image, scale_factor=1.2, step_ratio=1.0, min_size=(50, 50), max_size=(200, 200))
+    img=image, scale_factor=1.2, step_ratio=1.0, min_size=(50, 50), max_size=(400, 400))
 
 
 output = applyGaussianBlur(image, detected)
