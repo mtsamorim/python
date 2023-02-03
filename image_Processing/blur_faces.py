@@ -27,7 +27,7 @@ def applyGaussianBlur(image, detected, sigma=5):
     return image
 
 
-image = io.imread("face5.jpg")
+image = io.imread("Documents/face.jpg")
 
 trained_file = data.lbp_frontal_face_cascade_filename()
 
@@ -39,8 +39,9 @@ detected = detector.detect_multi_scale(
 
 output = applyGaussianBlur(image, detected)
 
-io.imsave("output3.jpg", output)
+# If you want to save
+# io.imsave("output3.jpg", output)
 
-# plt.imshow(output)
-# plt.axis('off')
-# plt.show()
+plt.imshow(output)
+plt.axis('off')
+plt.show()
