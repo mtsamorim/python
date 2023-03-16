@@ -10,8 +10,7 @@ tamanho_string = len(string)
 # Loop para trocar a posição dos caracteres
 for i in range(tamanho_string // 2):
     # Trocando os caracteres de posição
-    lista_caracteres[i], lista_caracteres[tamanho_string - 1 -
-                                          i] = lista_caracteres[tamanho_string - 1 - i], lista_caracteres[i]
+    lista_caracteres[i], lista_caracteres[tamanho_string - 1 - i] = lista_caracteres[tamanho_string - 1 - i], lista_caracteres[i]
 
 # Convertendo a lista de volta para uma string
 string_invertida = "".join(lista_caracteres)
