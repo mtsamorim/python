@@ -74,7 +74,7 @@ def postprocess_text(recognized_characters, recognized_words):
     return complete_text
 
 
-img = cv2.imread('/home/mtsamorim/Documents/compgraf/test3.png')
+img = cv2.imread('/home/mtsamorim/Documents/python/compgraf/test4.png')
 processed_image = preprocess_image(img)
 boxes = locate_text(processed_image)
 characters = segment_characters(processed_image, boxes)
@@ -83,7 +83,7 @@ recognized_words = recognize_words(img)
 complete_text = postprocess_text(recognized_characters, recognized_words)
 
 if recognized_words:
-    print("Recognized words: ", recognized_words)
+    print("Recognized characters: ", recognized_words)
 
 # Recognize words
 recognized_words = recognize_words(img)
@@ -93,7 +93,7 @@ complete_text = ' '.join(recognized_words)
 
 # Print complete text
 if complete_text:
-    print("Complete text: ", complete_text)
+    print("\nComplete text: ", complete_text)
 
 # Draw blue rectangles around each character on the original image
 for box in boxes:
